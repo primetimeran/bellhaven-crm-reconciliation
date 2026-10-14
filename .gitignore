@@ -1,0 +1,19 @@
+
+.streamlit/secrets.toml
+.venv/
+__pycache__/
+
+.streamlit/secrets.toml
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# CRM exports and local review decisions
+crm_*.csv
+approval_decisions.csv
+
+# Local configuration
+.env
+.env.*
+.DS_Store
