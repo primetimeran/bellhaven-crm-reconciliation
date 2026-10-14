@@ -90,14 +90,24 @@ with tab3:
             st.write("CRM address:", item["crm_address"])
             st.write("Match score:", item["confidence"])
 
+            saved = decisions[decisions["facility"] == item["facility"]]
+            saved_decision = saved.iloc[-1]["decision"] if not saved.empty else "Pending"
+            saved_note = saved.iloc[-1]["review_note"] if not saved.empty else ""
+
+            options = ["Pending", "Approve for further processing", "Reject"]
+            if saved_decision not in options:
+                saved_decision = "Pending"
+
             decision = st.selectbox(
                 "Decision",
-                ["Pending", "Approve for further processing", "Reject"],
+                options,
+                index=options.index(saved_decision),
                 key=f'decision_{item["facility"]}'
             )
 
             note = st.text_input(
                 "Review notes",
+                value=str(saved_note) if pd.notna(saved_note) else "",
                 key=f'note_{item["facility"]}'
             )
 
