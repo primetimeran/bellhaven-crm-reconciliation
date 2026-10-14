@@ -78,3 +78,26 @@ confirmation from the source owner.
 ## Technologies
 
 Python, Streamlit, pandas, requests, Beautiful Soup, RapidFuzz.
+
+## Data completeness and source discrepancy
+
+The assessment references 35 communities, but the public Bellhaven directory
+exposes 34 unique community detail links as of October 13, 2026.
+
+Validation:
+- Directory page 1: 16 unique communities
+- Directory page 2: 16 additional communities
+- Directory page 3: 2 additional communities
+- Pages 4 through 8: no additional communities
+- Total: 34 unique community pages
+- Missing scraped addresses: 0
+- Missing scraped care offerings: 0
+
+The workflow reports the 34 verified facilities rather than inventing
+a 35th record. Any unlisted facility requires source verification.
+
+## CRM safety
+
+Reconciliation is read-only by default. Proposed changes require review.
+Ownership changes, duplicates, and accounts with financial exposure
+must not be merged, deleted, or reassigned automatically.
