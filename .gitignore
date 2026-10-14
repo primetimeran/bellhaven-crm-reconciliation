@@ -17,3 +17,19 @@ approval_decisions.csv
 .env
 .env.*
 .DS_Store
+
+# Local assessment data and temporary diagnostics
+facilities.csv
+crm_matches.csv
+crm_financial_audit.csv
+crm_review_report.csv
+approval_decisions.csv
+app_before_save_fix.py
+check_pages.py
+inspect_communities.py
+inspect_crm.py
+inspect_website.py
+inspect_crm_backup.py
+match_crm_backup.py
+match_crm_backup_final.py
+test_crm.py
